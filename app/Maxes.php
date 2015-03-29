@@ -15,14 +15,14 @@ class Maxes extends Model implements AuthenticatableContract, CanResetPasswordCo
 	 *
 	 * @var string
 	 */
-	protected $table = '1RM';
+	protected $table = 'one_rep_max';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['bench', 'squat', 'deadlift', 'overhead_press'];
+	protected $fillable = ['bench', 'squat', 'deadlift', 'overhead_press','user_id'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -31,7 +31,10 @@ class Maxes extends Model implements AuthenticatableContract, CanResetPasswordCo
 	 */
 	protected $hidden = ['id'];
 
-    //TODO
-    //add relationships
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 
 }

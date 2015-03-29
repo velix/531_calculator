@@ -15,9 +15,15 @@ Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::post('weights', 'HomeController@initOneRepMax');
+Route::get('dashboard', 'DashboardController@index');
 
-Route::post('coordinates', 'HomeController@initGymCoord');
+Route::post('postweights', 'WeightController@store');
+
+Route::get('dashboard/locateGym', 'LocateGymController@index');
+
+Route::post('dashboard/locateGym', 'LocateGymController@initGymCoord');
+
+Route::get('dashboard/routine_details', 'RoutineDetailsController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

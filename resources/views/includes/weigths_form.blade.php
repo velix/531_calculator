@@ -1,4 +1,4 @@
-{!! Form::open( ['url' => '/weights', 'method' => 'post', 'class' => 'form-horizontal', 'id' => 'weights_form'] ) !!}
+{!! Form::open( ['url' => '/postweights', 'method' => 'post', 'class' => 'form-horizontal', 'id' => 'weights_form'] ) !!}
 
 <div class="control-group">
     {!! Form::label('bench', 'Bench Press', ['class' => 'control-label']) !!}
@@ -29,7 +29,7 @@
 </div>
 
 <div class="control-group">
-    {!! Form::button('Submit', ['type' => 'submit', 'onclick' => 'href="/weights"']) !!}
+    {!! Form::button('Submit', ['type' => 'submit', 'onclick' => 'href="/postweights"']) !!}
 </div>
 
 {!! Form::close() !!}

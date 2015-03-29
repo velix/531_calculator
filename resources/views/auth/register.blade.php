@@ -63,3 +63,24 @@
 	</div>
 </div>
 @endsection
+
+
+{{--{!! Form::open( ['url' => '/auth/register', 'role' => 'form', 'method' => 'post'] ) !!}--}}
+
+{{--<h2>Registration</h2>--}}
+
+{{--<div>--}}
+    {{--{!! Form::text('fullname', null, ['id' => 'fullname', 'placeholder' => 'username']) !!}--}}
+{{--</div>--}}
+
+{{--<div>--}}
+    {{--{!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'Email']) !!}--}}
+{{--</div>--}}
+
+{{--<div>--}}
+    {{--{!! Form::password('password', ['id' => 'password', 'placeholder' => 'Password']) !!}--}}
+{{--</div>--}}
+
+{{--{!! Form::button('Register', ['type' => 'submit', 'onclick' => 'href="/register"']) !!}--}}
+
+{{--{!! Form::close() !!}--}}

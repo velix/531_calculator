@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class OneRepMax extends Migration {
+class CreateGymCoordinatesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,16 +12,14 @@ class OneRepMax extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('1RM', function(Blueprint $table)
+		Schema::create('gym_coordinates', function(Blueprint $table)
 		{
-			$table->stirng('bench');
-            $table->stirng('squat');
-            $table->stirng('deadlift');
-            $table->stirng('overhead_press');
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->double('latitude');
+            $table->double('longitude');
             $table->timestamps();
-
-
 		});
 	}
 
@@ -32,10 +30,7 @@ class OneRepMax extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('1RM', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::drop('gym_coordinates');
 	}
 
 }

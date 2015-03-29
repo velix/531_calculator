@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+
+use Illuminate\Http\Request;
+use App\Maxes;
+
 class HomeController extends Controller {
 
 	/*
@@ -12,7 +16,7 @@ class HomeController extends Controller {
 	| controller as you wish. It is just here to get your app started!
 	|
 	*/
-
+//
 //    /**
 //     * Create a new controller instance.
 //     *
@@ -29,46 +33,14 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		return view('index');
 	}
 
 
-    /**
-     * @param Request $request
-     * @return $this
-     */
-    public function initOneRepMax(Request $request)
-    {
-        $validation_flag = false;
 
-        if ($validation_flag) {
-            return redirect('home')
-                ->withInput($request->all())
-                ->withErrors('errors!!');
-        } else {
 
-            //TODO
-            //Model logic
 
-            Maxes::create([
 
-                'bench' => $request['bench'],
-                'squat' => $request['squat'],
-                'deadlift' => $request['deadlift'],
-                'overhead_press' => $request['overhead_press']
-
-            ]);
-
-            return redirect('routine_details');
-        }
-
-    }
-
-    public function initGymCoord(Request $request)
-    {
-
-        return viewm('home');
-    }
 
 
 

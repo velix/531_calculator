@@ -4,9 +4,6 @@
 
 
 
-    @include('includes.weigths_form')
-
-
     @include('includes.locator')
 
 @endsection
